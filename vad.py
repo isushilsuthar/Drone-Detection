@@ -65,7 +65,7 @@ class WebRTCVAD:
                     self.active = True
                     break
                 elif len(self.history) == self.history.maxlen and sum(self.history) == 0:
-                    for _ in range(self.history.maxlen / 2):
+                    for _ in range(self.history.maxlen // 2):
                         self.history.popleft()
 
             else:
