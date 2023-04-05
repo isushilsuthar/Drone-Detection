@@ -2,7 +2,7 @@
 
 import sys
 import threading
-import Queue
+import queue
 import audioop
 import math
 import pyaudio
@@ -66,7 +66,7 @@ def gcc_phat(sig, refsig, fs=1, max_tau=None, interp=1):
 class DOA:
     def __init__(self):
         self.pyaudio_instance = pyaudio.PyAudio()
-        self.queue = Queue.Queue()
+        self.queue = queue.Queue()
         self.event = threading.Event()
 
     def start(self, quit_event=None, show=None):

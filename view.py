@@ -2,7 +2,7 @@
 
 import sys
 import threading
-import Queue
+import queue
 import audioop
 import math
 import pyaudio
@@ -25,7 +25,7 @@ direction_n = int(max_tau * RATE)
 class DOA:
     def __init__(self):
         self.pyaudio_instance = pyaudio.PyAudio()
-        self.queue = Queue.Queue()
+        self.queue = queue.Queue()
         self.event = threading.Event()
 
     def start(self, quit_event=None, show=None):
