@@ -19,7 +19,7 @@ import pyaudio
 import webrtcvad
 import numpy as np
 import collections
-import Queue
+import queue
 import threading
 import signal
 import sys
@@ -33,7 +33,7 @@ class Microphone:
 
     def __init__(self, rate=16000, channels=2):
         self.pyaudio_instance = pyaudio.PyAudio()
-        self.queue = Queue.Queue()
+        self.queue = queue.Queue()
         self.quit_event = threading.Event()
         self.channels = channels
         self.sample_rate = rate
