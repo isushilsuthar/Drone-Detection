@@ -1,4 +1,4 @@
 # Drone-Detection
 
-Drone detection with TDOA using GCC-PHAT, CNN, Computer Vision
+Drone detection and localisation with TDOA using GCC-PHAT, CNN, Computer Vision
 
